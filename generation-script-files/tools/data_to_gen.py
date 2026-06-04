@@ -1,6 +1,7 @@
 import random
 
 class DataToGen:
+    # Данные для генерации товаров и категорий
     CATEGORY_ITEMS = {
         "Бытовая химия": [
             "Стиральный порошок 3кг",
@@ -45,20 +46,26 @@ class DataToGen:
             "Пакеты для мусора 30л"
         ]
     }
+
+    # Поля csv файла
     FIELD_NAMES = ["doc_id", "item", "category", "amount", "price", "discount"]
 
+    # Случайное кол-во магазинов от 1 до 10
     @staticmethod
     def COUNT_SHOP():
         return random.randint(1, 10)
     
+    # Случайное кол-во касс в магазине от 1 до 4
     @staticmethod
     def COUNT_CASS():
         return random.randint(1, 4)
     
+    # Случайное кол-во чеков в 1 кассе от 25 до 50
     @staticmethod
     def COUNT_CHECKS():
         return random.randint(25, 50)
     
+    # Случайное кол-во кокретных товаров в чеке от 1 до 8
     @staticmethod
     def COUNT_ITEM_TYPE_IN_ONE_CHECS():
         return random.randint(1, 8)
