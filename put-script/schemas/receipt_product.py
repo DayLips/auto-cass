@@ -10,9 +10,3 @@ class ReceiptProductBase(BaseModel):
 
 class ReceiptProductCreate(ReceiptProductBase):
     ...
-
-class ReceiptProductResponse(ReceiptProductBase):
-    id: int = Field(..., description='ID ReceiptProduct')
-
-    class Config:
-        from_attributes = True
