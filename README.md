@@ -27,9 +27,9 @@
    Для начала вам надо перейти в директорию put-script/ и создать там виртуальное окружение, затем активировать его и закачать библиотеки из файла requiremnts.txt
    
    -------------------------------
-   cd put-script
-   python -m venv venv
-   venv/Scripts/activate
+   cd put-script   
+   python -m venv venv   
+   venv/Scripts/activate   
    pip install -r requirements.txt
    
    -------------------------------   
