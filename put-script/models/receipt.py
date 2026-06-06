@@ -8,7 +8,7 @@ class Receipt(Base):
     __tablename__ = "receipts"
 
     id = Column(Integer, primary_key=True, index=True)
-    doc_id = Column(String(8), unique=True, index=True, nullable=True)
+    doc_id = Column(String(16), index=True, nullable=True)
     cass_id = Column(Integer, ForeignKey("casses.id"), nullable=False)
     total_price = Column(Numeric, nullable=False)
     created_at = Column(DateTime, default=datetime.now)

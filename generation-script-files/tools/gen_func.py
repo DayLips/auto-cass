@@ -4,7 +4,7 @@ class GenFunc:
     
     # Функция генерации doc_id
     @staticmethod
-    def generate_doc_id(length=8):
+    def generate_doc_id(length=16):
         alphabet = string.ascii_uppercase + string.digits
         return ''.join(random.choices(alphabet, k=length))
     
