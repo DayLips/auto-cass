@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from typing import List
+from typing import Optional
 
 from models import Category
 from schemas import CategoryCreate
@@ -11,8 +11,8 @@ class CategoryRepository:
     def get_count(self) -> int:
         return self.db.query(Category).count()
     
-    def get_all(self) -> List[Category]:
-        return self.db.query(Category).all()
+    def get_by_name(self, name: str) -> Optional[Category]:
+        return self.db.query(Category).filter(Category.name == name).first()
     
     def create(self, data: CategoryCreate) -> bool:
         try:

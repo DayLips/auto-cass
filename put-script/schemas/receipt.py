@@ -9,10 +9,3 @@ class ReceiptBase(BaseModel):
 
 class ReceiptCreate(ReceiptBase):
     ...
-
-class ReceiptResponse(ReceiptBase):
-    id: int = Field(..., description='ID Receipt')
-    created_at: datetime = Field(..., description="Datetime created in table receipts")
-
-    class Config:
-        from_attributes = True

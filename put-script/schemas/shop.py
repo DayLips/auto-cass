@@ -8,12 +8,3 @@ class ShopBase(BaseModel):
 
 class ShopCreate(ShopBase):
     ...
-
-class ShopResponse(ShopBase):
-    id: int = Field(..., description='ID Shop')
-
-    class Config:
-        from_attributes = True
-
-class ShopListResponse(BaseModel):
-    shops: list[ShopResponse]

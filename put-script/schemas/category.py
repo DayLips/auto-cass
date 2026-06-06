@@ -7,12 +7,3 @@ class CategoryBase(BaseModel):
 
 class CategoryCreate(CategoryBase):
     ...
-
-class CategoryResponse(CategoryBase):
-    id: int = Field(..., description='ID Category')
-
-    class Config:
-        from_attributes = True
-
-class CategoryListResponse(BaseModel):
-    categories: list[CategoryResponse]

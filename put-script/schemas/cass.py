@@ -11,10 +11,3 @@ class CassBase(BaseModel):
 
 class CassCreate(CassBase):
     ...
-
-class CassResponse(CassBase):
-    id: int = Field(..., description='ID Cass')
-    shop: ShopResponse = Field(..., description='Shop')
-
-    class Config:
-        from_attributes = True

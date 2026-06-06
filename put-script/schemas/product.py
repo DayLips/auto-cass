@@ -10,10 +10,3 @@ class ProductBase(BaseModel):
 
 class ProductCreate(ProductBase):
     ...
-
-class ProductResponse(ProductBase):
-    id: int = Field(..., description='ID Product')
-    category: CategoryResponse = Field(..., description='Product category details')
-
-    class Config:
-        from_attributes = True
