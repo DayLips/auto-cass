@@ -15,7 +15,7 @@
 
 1. Клонируйте репозиторий:   
    ----------------------------------------------------
-   git clone https://github.com/DayLips/auto-cass
+   git clone https://github.com/DayLips/auto-cass   
    cd auto-cass/put-script
    
    ----------------------------------------------------
