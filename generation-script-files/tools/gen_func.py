@@ -27,6 +27,6 @@ class GenFunc:
             'item': random.choice(items),
             'category': category,
             'amount': amount,
-            'price': round(random.uniform(50, 5000), 2),
+            'price': round(random.uniform(50, 1000), 2),
             'discount': pred_discount if pred_discount > 30 else 0
         }

@@ -9,7 +9,7 @@ class Shop(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(50), unique=True, nullable=False)
     num_shop = Column(Integer, nullable=False, unique=True)
-    descriprion = Column(Text)
+    description = Column(Text)
 
     casses = relationship("Cass", back_populates='shop')
 

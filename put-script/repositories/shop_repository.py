@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 from typing import List
 
 from models import Shop
@@ -17,6 +17,7 @@ class ShopRepository:
     def get_by_num(self, num_shop: int) -> Shop:
         return (
             self.db.query(Shop)
+            .options(joinedload(Shop.casses))
             .filter(Shop.num_shop == num_shop)
             .first()
         )

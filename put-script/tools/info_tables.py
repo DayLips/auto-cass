@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from repositories import CategoryRepository, ProductRepository, ShopRepository, CassRepository
 from schemas import CategoryCreate, ProductCreate, ShopCreate, CassCreate
-from decimal import Decimal
+from decimal import Decimal, ROUND_HALF_UP
 import random
 
 class InfoTable:
@@ -164,7 +164,7 @@ class InfoTable:
                     shop_id=shop_id,
                     num_cass=i,
                     available=True,
-                    total_money=Decimal(str(total_money))
+                    total_money=Decimal(str(total_money)).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
                 )
 
                 cass_db = self.cass_repository.create(cass_data)

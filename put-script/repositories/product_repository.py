@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session, joinedload
-from typing import List
+from typing import List, Optional
 
 from models import Product
 from schemas import ProductCreate
@@ -14,7 +14,7 @@ class ProductRepository:
     def get_all(self) -> List[Product]:
         return self.db.query(Product).all()
     
-    def get_by_name(self, name: str) -> Product:
+    def get_by_name(self, name: str) -> Optional[Product]:
         return (
             self.db.query(Product)
             .options(joinedload(Product.category))
