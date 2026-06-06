@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field
-from typing import Optional
 from decimal import Decimal
+
+from .shop import ShopResponse
 
 class CassBase(BaseModel):
     num_cass: int = Field(..., gt=0, description="Num cass")
@@ -13,6 +14,7 @@ class CassCreate(CassBase):
 
 class CassResponse(CassBase):
     id: int = Field(..., description='ID Cass')
+    shop: ShopResponse = Field(..., description='Shop')
 
     class Config:
         from_attributes = True
