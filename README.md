@@ -15,7 +15,7 @@
 
 1. Клонируйте репозиторий:
    ----------------------------------------------------
-   git clone https://github.com/ваш-логин/auto-cass.git
+   git clone https://github.com/DayLips/auto-cass
    cd auto-cass/put-script
    ----------------------------------------------------
 3. Работа с generation-script-files:
